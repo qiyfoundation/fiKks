@@ -1,26 +1,18 @@
 #//# --------------------------------------------------------------------------------------
-#//# Created using Sequence Diagram for Mac
-#//# https://www.macsequencediagram.com
-#//# https://itunes.apple.com/gb/app/sequence-diagram/id1195426709?mt=12
+#//# Created using websequencediagrams.com
 #//# --------------------------------------------------------------------------------------
 # fiKks iIntegratie overzicht voor schuldeisers
 # Schuldeiser node setup
 
-participant "Schuldeiser"				as DP
-participant "Qiy Access Provider"		as AP
-participant "Schuldeiser node"		as NodeDP
+title Node setup schuldeiser
 
-region Schuldeiser node setup
+participant "Schuldeiser"         as DP
+participant "Qiy Access Provider" as AP
+participant "Schuldeiser node"    as NodeDP
 
-	DP	-> AP		: request Schuldeiser node
+	DP	-> AP		: Request Schuldeiser node
 
-	activate NodeDP
-	AP -> NodeDP	: Initiate
+	AP ->+ NodeDP	: Initiate
 
-end
+	DP	->	NodeDP	: Register "inzage eigen gegevens" service
 
-region Register "inzage eigen gegevens" service
-
-	DP	->	NodeDP	: Register
-
-end

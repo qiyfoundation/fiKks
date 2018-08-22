@@ -1,52 +1,30 @@
 #//# --------------------------------------------------------------------------------------
-#//# Created using Sequence Diagram for Mac
-#//# https://www.macsequencediagram.com
-#//# https://itunes.apple.com/gb/app/sequence-diagram/id1195426709?mt=12
+#//# Created using websequencediagrams.com
 #//# --------------------------------------------------------------------------------------
-# fiKks iIntegratie overzicht voor schuldeisers
-# Data request 
+# fiKks integratie overzicht voor schuldeisers
 
-participant "fiKks App"			as AppRP
-participant "fiKks back-end"	as BackEndRP
-participant "Schuldeiser"		as DP
-participant "Connection #2"	as C2
-participant "User node"			as NodeUser
-participant "Connection #1"	as C1
+title Data Reuse
+ 
+participant "fiKks back-end"     as BeRP
+participant "Qiy Trust Network"  as QTN
+participant "fiKks App"          as AppRP
+participant "Schuldeiser"        as DP
 
-activate Node
-activate C1
-activate C2
+	BeRP  ->  QTN    : vragen consent
+	QTN   ->  AppRP  : vragen consent
+	AppRP --> QTN    : consent
 
-region [Data request]
+	QTN	  ->  DP	 : opvragen operatie
+	DP    -->  QTN   : operatie
+	QTN   --> BeRP  : referentie
 
-  region voorbereiden
-	BackEndRP		-> C1			: opvragen schulden informatie
-	C1				-> NodeUser	: opvragen schulden informatie
-	NodeUser		-> AppRP		: vraag instemming
+     loop gegevens opvragen 
+    
+    	BeRP ->  QTN	: request met referentie
+    	QTN  -> QTN     : opzoeken operatie
+    	QTN  -> DP      : uitvoeren operatie
+    	DP   --> QTN    : data
+    	QTN  --> BeRP	: data
 
-	NodeUser		-> C2			: opvragen schulden informatie
-	C2				-> DP			: opvragen schulden informatie
-  end
+     end
 
-  region verstrek data referentie
-	DP				-> C2			: registreer operatie
-	DP				-> C2			: data referentie
-	C2				-> NodeUser	: data referentie
-	NodeUser		-> C1			: data referentie
-	C1				-> BackEndRP	: data  referentie
-  end
-
- loop gegevens opvragen 
-
-	note over BackEndRP
-		Opmerking					: logische weergave
-	end note
-
-	activate DP
-		BackEndRP	-> DP			: request data referentie
-		DP			-> BackEndRP	: response
-	deactivate DP
-
- end
-
-end

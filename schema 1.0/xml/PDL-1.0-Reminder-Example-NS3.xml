@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Voorbeeld van een 3e herinnering. -->
+<!-- Per bank overschrijving dient het restant te worden voldaan. -->
+<!-- Betaalt u de 3e herinnering niet op tijd? Dan schakelen wij een incassobureau of gerechtsdeurwaarder in. U betaalt de schuld aan het incassobureau of gerechtsdeurwaarder. Dit geldt ook voor de extra kosten die zij in rekening brengen. -->
+<PaymentDueList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="../xsd/PaymentDueList-1.0.xsd"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<Invoice>
+		<cbc:ID>1</cbc:ID>
+		<cbc:IssueDate>2017-12-01</cbc:IssueDate>
+		<cbc:Note>ZieZo zorgverzekering premie december 2017.</cbc:Note>
+		<cbc:CurrencyCode>EUR</cbc:CurrencyCode>
+		<cac:AccountingSupplierParty>
+			<cac:Party>	
+				<cac:PartyIdentification>
+					<cbc:ID schemeAgencyID="NL" schemeAgencyName="KVK">06088185</cbc:ID>
+				</cac:PartyIdentification>
+				<cac:PartyName>
+					<cbc:Name>Zilveren Kruis Zorgverzekeringen N.V.</cbc:Name>
+				</cac:PartyName>
+				<cac:PostalAddress>
+					<cbc:StreetName>Postbus 444</cbc:StreetName>
+					<cbc:CityName>Leiden</cbc:CityName>
+					<cbc:PostalZone>2300AK</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+						<cbc:Name>Nederland</cbc:Name>
+					</cac:Country>
+				</cac:PostalAddress>			
+				<cac:PartyLegalEntity>
+					<cbc:CompanyID>06088185</cbc:CompanyID>
+				</cac:PartyLegalEntity>
+				<cac:Contact>
+					<cbc:Telephone>+31 71 751 00 52 </cbc:Telephone>
+				</cac:Contact>
+			</cac:Party>
+		</cac:AccountingSupplierParty>
+		<cac:PaymentMeans>
+			<cbc:ID>1</cbc:ID>
+			<cbc:PaymentMeansCode listID="UN/ECE 4461" listName="Payment Means" listURI="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/PaymentMeansCode-2.0.gc">49</cbc:PaymentMeansCode>
+			<cbc:PaymentDueDate>2017-12-15</cbc:PaymentDueDate>
+			<cbc:InstructionNote>000123456789</cbc:InstructionNote>
+			<cac:PayeeFinancialAccount>
+				<cbc:ID schemeName="IBAN">NL51RABO0XXXXX678</cbc:ID>
+				<cac:FinancialInstitutionBranch>
+					<cac:FinancialInstitution>
+						<cbc:ID schemeName="BIC">RABONL2U</cbc:ID>
+					</cac:FinancialInstitution>
+				</cac:FinancialInstitutionBranch>
+			</cac:PayeeFinancialAccount>
+		</cac:PaymentMeans>
+		<cac:PaymentMeans>
+			<cbc:ID>2</cbc:ID>
+			<cbc:PaymentMeansCode listID="UN/ECE 4461" listName="Payment Means" listURI="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/PaymentMeansCode-2.0.gc">31</cbc:PaymentMeansCode>
+			<cbc:PaymentDueDate>2017-12-15</cbc:PaymentDueDate>
+			<cbc:InstructionNote>000123456789</cbc:InstructionNote>
+			<cac:PayeeFinancialAccount>
+				<cbc:ID schemeName="IBAN">NL51RABO012345678</cbc:ID>
+				<cac:FinancialInstitutionBranch>
+					<cac:FinancialInstitution>
+						<cbc:ID schemeName="BIC">RABONL2U</cbc:ID>
+					</cac:FinancialInstitution>
+				</cac:FinancialInstitutionBranch>
+			</cac:PayeeFinancialAccount>
+		</cac:PaymentMeans>
+		<cac:PaymentTerms>
+			<cbc:ID>1</cbc:ID>
+			<cbc:PaymentMeansID>1</cbc:PaymentMeansID>
+			<cbc:Note>Het factuuredrag wordt automatisch van uw rekening afgeschreven.</cbc:Note>
+			<cbc:PaymentDueDate>2017-12-15</cbc:PaymentDueDate>		
+			<cac:SettlementPeriod>
+				<cbc:StartDate>2017-12-10</cbc:StartDate>
+			</cac:SettlementPeriod>
+			<cac:ValidityPeriod>
+				<cbc:EndDate>2017-12-31</cbc:EndDate>
+			</cac:ValidityPeriod>
+		</cac:PaymentTerms>
+		<cac:PaymentTerms>
+			<cbc:ID>2</cbc:ID>
+			<cbc:PaymentMeansID>2</cbc:PaymentMeansID>
+			<cbc:Note>Het is niet gelukt het factuurbedrag van uw rekening af te schrijven.</cbc:Note>
+			<cbc:Note>U dient het openstaande bedrag binnen 15 dagen per overschrijving aan ons te voldoen.</cbc:Note>
+			<cac:SettlementPeriod>
+				<cbc:EndDate>2017-12-31</cbc:EndDate> 
+			</cac:SettlementPeriod>
+		</cac:PaymentTerms>
+		<cac:PaymentTerms>
+			<cbc:ID>3</cbc:ID>
+			<cbc:PaymentMeansID>2</cbc:PaymentMeansID>
+			<cbc:Note>1e Herinnering, U dient het openstaande bedrag binnen 15 dagen per overschrijving aan ons te voldoen.</cbc:Note>
+			<cbc:Note>Betaalt u de 1e herinnering niet op tijd? Dan betaalt u € 10 extra.</cbc:Note>
+			<cbc:PenaltyAmount currencyID="EUR">10.00</cbc:PenaltyAmount>
+			<cac:SettlementPeriod>
+				<cbc:StartDate>2018-01-01</cbc:StartDate> 
+			</cac:SettlementPeriod>
+			<cac:PenaltyPeriod>
+				<cbc:StartDate>2018-01-15</cbc:StartDate>
+			</cac:PenaltyPeriod>
+			<cac:ValidityPeriod>
+				<cbc:EndDate>2018-01-31</cbc:EndDate>
+			</cac:ValidityPeriod>
+		</cac:PaymentTerms>
+		<cac:PaymentTerms>
+			<cbc:ID>4</cbc:ID>
+			<cbc:PaymentMeansID>2</cbc:PaymentMeansID>
+			<cbc:Note>2e Herinnering, U dient het openstaande bedrag binnen 15 dagen per overschrijving aan ons te voldoen.</cbc:Note>
+			<cbc:Note>Betaalt u de 2e herinnering niet op tijd? Dan betaalt u € 25 extra.</cbc:Note>
+			<cbc:PenaltyAmount currencyID="EUR">25.00</cbc:PenaltyAmount>
+			<cac:SettlementPeriod>
+				<cbc:StartDate>2018-02-01</cbc:StartDate> 
+			</cac:SettlementPeriod>
+			<cac:PenaltyPeriod>
+				<cbc:StartDate>2018-02-15</cbc:StartDate>
+			</cac:PenaltyPeriod>
+			<cac:ValidityPeriod>
+				<cbc:EndDate>2018-02-28</cbc:EndDate>
+			</cac:ValidityPeriod>
+		</cac:PaymentTerms>
+		<cac:PaymentTerms>
+			<cbc:ID>5</cbc:ID>
+			<cbc:PaymentMeansID>2</cbc:PaymentMeansID>
+			<cbc:Note> 3e Herinnering, U dient het openstaande bedrag binnen 15 dagen per overschrijving aan ons te voldoen.</cbc:Note>
+			<cbc:Note> Betaalt u de 3e herinnering niet op tijd? Dan schakelen wij een incassobureau of gerechtsdeurwaarder in. U betaalt de schuld aan het incassobureau of gerechtsdeurwaarder. Dit geldt ook voor de extra kosten die zij in rekening brengen.</cbc:Note>
+			<cbc:Note> Elke nieuwe schuld sturen wij direct door naar het incassobureau of de gerechtsdeurwaarder. Van deze nieuwe schuld krijgt u van ons geen aparte herinnering.</cbc:Note>
+			<cbc:Note> Betaalt u het incassobureau of de gerechtsdeurwaarder ook niet? Dan start de gerechtsdeurwaarder een dagvaardingsprocedure bij de kantonrechter.</cbc:Note>
+			<cac:SettlementPeriod>
+				<cbc:StartDate>2018-03-01</cbc:StartDate> 
+			</cac:SettlementPeriod>
+			<cac:ValidityPeriod>
+				<cbc:EndDate>2018-03-15</cbc:EndDate>
+			</cac:ValidityPeriod>
+		</cac:PaymentTerms>
+		<cac:LegalMonetaryTotal>
+			<cbc:LineExtensionAmount currencyID="EUR">122.20</cbc:LineExtensionAmount>
+			<cbc:TaxExclusiveAmount currencyID="EUR">122.20</cbc:TaxExclusiveAmount>
+			<cbc:TaxInclusiveAmount currencyID="EUR">122.20</cbc:TaxInclusiveAmount>
+			<cbc:ChargeTotalAmount currencyID="EUR">35.00</cbc:ChargeTotalAmount>
+			<cbc:PayableAmount currencyID="EUR">157.20</cbc:PayableAmount>
+		</cac:LegalMonetaryTotal>
+	</Invoice>
+</PaymentDueList>
+	

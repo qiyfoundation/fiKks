@@ -9,19 +9,22 @@ FiKks kent 5 hoofdfuncties:
 *  Via algoritmes bepalen in welke volgorde schulden afbetaald moeten worden aan welke schuldeisers, zodat de minste kosten gemaakt worden.
 *  Het online via de app aanvragen, accorderen en uitvoeren van een schuldregeling met schuldeisers. Met schuldeisers zijn vooraf de condities tot accordering besproken zodat deze verwerkt zijn in de app.
 
-Fikks maakt gebruik van het basisuitgangspunt dat een betrokkene recht op inzage heeft in zijn of haar persoonsgegevens en op een kopie van die gegevens in een gangbare elektronische vorm. Voor een schaalbare realisatie van deze gegevensuitwisseling wordt gebruik gemaakt van het Qiy Trust Framework zodat naast schaalbaarheid tevens invulling wordt gegeven aan de in de algemene verordening gegevensbescherming (AVG) opgenomen verplichting van gegevensbescherming door ontwerp (‘data protection by design’).
+Fikks maakt gebruik van het basisuitgangspunt dat een betrokkene recht op inzage heeft in zijn of haar persoonsgegevens en op een kopie van die gegevens in een gangbare elektronische vorm. 
+
+Meer informatie over fiKks kunt u vinden op https://wijgaanhetfikksen.nl
 
 # Standaard voor gegevensuitwisseling
 Gegevensuitwisseling tussen informatiesystemen in het kader van fiKks vindt plaats volgens de de binnen deze repository gedefinieerde standaard. Het aanleverende systeem is verantwoordelijk voor de vertaling van gegevens naar deze standaard. Het afnemende systeem zorgt voor omzetting naar haar eigen taal.
 
-De standaard definieert het formaat voor gestructureerde vastlegging van gegevens en hun betekenis voor medium-onafhankelijke opslag en uitwisseling.
+De standaard definieert het formaat voor gestructureerde vastlegging van gegevens en hun betekenis voor medium-onafhankelijke opslag en uitwisseling.  Zie [schema 1.0](schema v1.0/) voor de beschrijving van de toegepaste standaard en voorbeelden.
 
-# Git-Flow
-Git-Flow is een set van conventions over hoe te werken met Git en wordt toegepast op deze repository. Het definieert de workflows voor de meest voorkomende werkzaamheden - zoals het opnemen van nieuwe functionaliteit, hotfixes of releases. Meer over deze 'branching' strategie en release management, wordt uitgelegd in de blog-post [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/).
+# Qiy Trust Network
+Voor een schaalbare realisatie van deze gegevensuitwisseling wordt gebruik gemaakt van het Qiy Trust Framework zodat naast schaalbaarheid tevens invulling wordt gegeven aan de in de algemene verordening gegevensbescherming (AVG) opgenomen verplichting van gegevensbescherming door ontwerp (‘data protection by design’).
 
-Conventions used:
+Voor meer informatie over het Qiy Trust Network, zie de website van [stichting Qiy Foundation](https://qiyfoundation.org).
 
-* Feature branch prefix: **feature/**
-* Topic branch prefix: **topic/**
-* Hotfix branch prefix: **hotfix/**
-* Release branch prefix: **release/**
+Voor het aansluiten op het Qiy Trust Network neemt u contact op met een Access Provider van het Qiy Trust Network:
+
+* DigitalMe B.V - https://digital-me.nl
+
+

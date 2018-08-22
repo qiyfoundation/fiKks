@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1">
+
+    <xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+        schemaLocation="https://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/common//UBL-CommonAggregateComponents-2.1.xsd"/>
+    <xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+        schemaLocation="https://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/common//UBL-CommonBasicComponents-2.1.xsd"/>
+    <xs:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+        schemaLocation="https://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/common/UBL-CommonExtensionComponents-2.1.xsd"/>
+
+    <xs:element name="PaymentDueList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="Invoice" type="InvoiceType"/>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="Installment"
+                    type="InstallmentType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="InvoiceType">
+        <xs:sequence>
+            <xs:element ref="cbc:ID"/>
+            <xs:element ref="cbc:IssueDate"/>
+            <xs:element ref="cbc:Note" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element ref="cbc:CurrencyCode"/>
+            <xs:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="cac:AccountingSupplierParty"/>
+            <xs:element ref="cac:PaymentMeans" maxOccurs="unbounded"/>
+            <xs:element ref="cac:PaymentTerms" maxOccurs="unbounded"/>
+            <xs:element ref="cac:LegalMonetaryTotal"/>
+            <xs:element ref="cac:InvoiceLine" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="InstallmentType">
+        <xs:sequence minOccurs="1">
+            <xs:element ref="cbc:ID"/>
+            <xs:element ref="cbc:IssueDate"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="cbc:Note"/>
+            <xs:element ref="cbc:CurrencyCode"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="cac:DocumentReference"/>
+            <xs:element maxOccurs="unbounded" ref="cac:PaymentMeans"/>
+            <xs:element maxOccurs="unbounded" ref="cac:PaymentTerms"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
