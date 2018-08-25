@@ -11,7 +11,7 @@ FiKks kent 5 hoofdfuncties:
 
 Fikks maakt gebruik van het basisuitgangspunt dat een betrokkene recht op inzage heeft in zijn of haar persoonsgegevens en op een kopie van die gegevens in een gangbare elektronische vorm. 
 
-Meer informatie over fiKks kunt u vinden op https://wijgaanhetfikksen.nl
+Meer informatie over fiKks kunt u vinden op https://samenmetfikks.nl
 
 # Standaard voor gegevensuitwisseling
 Gegevensuitwisseling tussen informatiesystemen in het kader van fiKks vindt plaats volgens de de binnen deze repository gedefinieerde standaard. Het aanleverende systeem is verantwoordelijk voor de vertaling van gegevens naar deze standaard. Het afnemende systeem zorgt voor omzetting naar haar eigen taal.
