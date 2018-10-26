@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Voorbeeld van een betalingsregeling getroffen na 2e herinnering. -->
 <!-- Per bank overschrijving dienen de afgesproken betalingen te worden voldaan. -->
-<PaymentDueList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/PaymentDueList-1.0.xsd" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+<PaymentDueList xmlns="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList https://raw.githubusercontent.com/qiyfoundation/fiKks/master/schema/v1/xsd/PaymentDueList-1.0.xsd"
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 	<Invoice>
 		<cbc:ID>1</cbc:ID>
 		<cbc:IssueDate>2017-12-01</cbc:IssueDate>
 		<cbc:Note>ZieZo zorgverzekering premie december 2017.</cbc:Note>
 		<cbc:CurrencyCode>EUR</cbc:CurrencyCode>
 		<cac:AccountingSupplierParty>
-			<cac:Party>	
+			<cac:Party>
 				<cac:PartyIdentification>
 					<cbc:ID schemeAgencyID="NL" schemeAgencyName="KVK">06088185</cbc:ID>
 				</cac:PartyIdentification>
@@ -23,7 +27,7 @@
 						<cbc:IdentificationCode>NL</cbc:IdentificationCode>
 						<cbc:Name>Nederland</cbc:Name>
 					</cac:Country>
-				</cac:PostalAddress>			
+				</cac:PostalAddress>
 				<cac:PartyLegalEntity>
 					<cbc:CompanyID>06088185</cbc:CompanyID>
 				</cac:PartyLegalEntity>
@@ -64,7 +68,7 @@
 			<cbc:ID>1</cbc:ID>
 			<cbc:PaymentMeansID>1</cbc:PaymentMeansID>
 			<cbc:Note>Het factuuredrag wordt automatisch van uw rekening afgeschreven.</cbc:Note>
-			<cbc:PaymentDueDate>2017-12-15</cbc:PaymentDueDate>		
+			<cbc:PaymentDueDate>2017-12-15</cbc:PaymentDueDate>
 			<cac:SettlementPeriod>
 				<cbc:StartDate>2017-12-10</cbc:StartDate>
 			</cac:SettlementPeriod>
@@ -78,7 +82,7 @@
 			<cbc:Note>Het is niet gelukt het factuurbedrag van uw rekening af te schrijven.</cbc:Note>
 			<cbc:Note>U dient het openstaande bedrag binnen 15 dagen per overschrijving aan ons te voldoen.</cbc:Note>
 			<cac:SettlementPeriod>
-				<cbc:EndDate>2017-12-31</cbc:EndDate> 
+				<cbc:EndDate>2017-12-31</cbc:EndDate>
 			</cac:SettlementPeriod>
 		</cac:PaymentTerms>
 		<cac:PaymentTerms>
@@ -88,7 +92,7 @@
 			<cbc:Note>Betaalt u de 1e herinnering niet op tijd? Dan betaalt u € 10 extra.</cbc:Note>
 			<cbc:PenaltyAmount currencyID="EUR">10.00</cbc:PenaltyAmount>
 			<cac:SettlementPeriod>
-				<cbc:StartDate>2018-01-01</cbc:StartDate> 
+				<cbc:StartDate>2018-01-01</cbc:StartDate>
 			</cac:SettlementPeriod>
 			<cac:PenaltyPeriod>
 				<cbc:StartDate>2018-01-15</cbc:StartDate>
@@ -104,7 +108,7 @@
 			<cbc:Note>Betaalt u de 2e herinnering niet op tijd? Dan betaalt u € 25 extra.</cbc:Note>
 			<cbc:PenaltyAmount currencyID="EUR">25.00</cbc:PenaltyAmount>
 			<cac:SettlementPeriod>
-				<cbc:StartDate>2018-02-01</cbc:StartDate> 
+				<cbc:StartDate>2018-02-01</cbc:StartDate>
 			</cac:SettlementPeriod>
 			<cac:PenaltyPeriod>
 				<cbc:StartDate>2018-02-15</cbc:StartDate>
