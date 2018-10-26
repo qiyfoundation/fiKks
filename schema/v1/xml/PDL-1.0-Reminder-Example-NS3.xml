@@ -2,10 +2,11 @@
 <!-- Voorbeeld van een 3e herinnering. -->
 <!-- Per bank overschrijving dient het restant te worden voldaan. -->
 <!-- Betaalt u de 3e herinnering niet op tijd? Dan schakelen wij een incassobureau of gerechtsdeurwaarder in. U betaalt de schuld aan het incassobureau of gerechtsdeurwaarder. Dit geldt ook voor de extra kosten die zij in rekening brengen. -->
-<PaymentDueList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:noNamespaceSchemaLocation="../xsd/PaymentDueList-1.0.xsd"
- xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
- xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+<PaymentDueList xmlns="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList https://raw.githubusercontent.com/qiyfoundation/fiKks/master/schema/v1/xsd/PaymentDueList-1.0.xsd"
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 	<Invoice>
 		<cbc:ID>1</cbc:ID>
 		<cbc:IssueDate>2017-12-01</cbc:IssueDate>
