@@ -27,29 +27,30 @@ De Payment Means klasse beschrijft de betaalwijze waarop een betaling dient te w
 
 Toegepaste elementen zijn:
 
-<u>Payment Means ID</u>
+#### Payment Means ID
 
 Payment Means ID wordt gebruikt om onderscheid te maken tussen Payment Means wanneer
-meer dan één instantie is opgegeven. Het gebruik van volgnummers is aanbevolen.
+meer dan ��n instantie is opgegeven. Het gebruik van volgnummers is aanbevolen.
 
-<u>Payment Means Code</u>
+#### Payment Means Code
 
 Codes die zowel handmatige als elektronische betaalmiddelen vertegenwoordigen.
 
 Als er geen specifieke specifieke betalingswijze vereist is, is de code van de betalingswijze = "1" (niet gedefinieerd).
 
-<u>PaymentDueDate</u>
+#### PaymentDueDate
 
 Gebruikt om de uiterlijke betaaldatum voor een betaalwijze te specificeren specificeren.
-  <u>InstructionID</u>
+
+#### InstructionID
 
 Code welke de klant dient te gebruiken waaraan de organisatie als ontvanger van een betaling een betaling kan identificeren en herleiden tot een openstaande post. 
   
-<u>PayeeFinancialAccount</u>
+#### PayeeFinancialAccount
 
 Specificatie van het bankrekening nummer van de begunstigde welke een klant dient te gebruiken in het geval van een door de klant geïnitieerd elektronische betaling.
 
-<u>PayerFinancialAccount</u>
+#### PayerFinancialAccount
 
 Specificatie van het bankrekening nummer van de klant om een door de organisatie geïnitieerde elektronische betaling  bij de klant te innen. Dit element wordt gebruikt in geval van bijvoorbeeld een incasso machtiging.
 
@@ -92,32 +93,32 @@ Betalingsvoorwaarden beschrijven informatie van een organisatie aan de klant ove
 
 >  Betalingsvoorwaarden zijn informatief en hun waarden zijn niet opgenomen in de totalen van de facturen.
 
-<u>Payment Terms ID</u>
+#### Payment Terms ID
 
 Payment Terms ID wordt gebruikt om onderscheid te maken tussen Payment Terms wanneer
 meer dan één instantie is opgegeven. Het gebruik van volgnummers is aanbevolen.
 
-<u>Payment Means ID</u>
+#### Payment Means ID
 
 Referentie aan specifiek Payment Means ID waarop de betalingsvoorwaarde van toepassing is.
 
 Indie het Payment Means ID is opgegeven, zijn de betalingsvoorwaarden alleen van toepassing op de opgegeven betaalwijze (en niet op andere betaalwijzen).
 
-<u>Settlement Discount Amount</u>
+#### Settlement Discount Amount
 Bedrag dat in mindering mag worden gebracht bij betaling onder betreffende voorwaarden.
 
 Er kan ook gebruik gemaakt worden van een percentage specificatie middels het Settlement Discount Percent element.
 
-<u>Penalty Surcharge Amount</u>
+#### Penalty Surcharge Amount
 Bedrag waar mee het openstaande bedrag vermeerderd dient te worden indien aan de boete voorwaarden wordt voldoaan.
 
 Er kan ook gebruik gemaakt worden van een percentage specificatie middels het Penalty Surcharge Percent element.
 
-<u>Settlement Period</u>
+#### Settlement Period
 
 Settlement Period geeft de datums aan die moeten worden gebruikt bij het berekenen van kortingen voor de gegeven betalingsvoorwaarden. Bijvoorbeeld als voor een bepaalde datum de betaling wordt voldaan.
 
-<u>Penalty Period</u>
+#### Penalty Period
 
 Penalty Period geeft de datums aan die moeten worden gebruikt bij het berekenen van boetes voor de gegeven betalingsvoorwaarden. Bijvoorbeeld als de vervaldatum van de betaling (aangegeven in Payment Means) is gepasseerd.
 
@@ -156,26 +157,26 @@ Voorbeeld van PaymentTerms bij een incasso machtiging:
 
 De Legal Monetary Total beschrijft de verschillende totaalbedragen die gezamenlijk het totaal van het openstaande bedrag vormen.
 
-<u>LineExtensionAmount </u>
+#### LineExtensionAmount 
 Het geldbedrag van de factuurregels, na aftrek van belastingen en afwikkelingskortingen, maar inclusief alle toepasselijke afrondingsbedragen.
 
-<u>TaxInclusiveAmount</u>
+#### TaxInclusiveAmount
 
 Het geldbedrag inclusief belastingen; de som van het te betalen bedrag en het voorafbetaalde bedrag.
 
-<u>ChargeTotalAmount</u> 
+#### ChargeTotalAmount 
 
 Het totale geldbedrag van alle bijkomende kosten en boetes.
 
-<u>AllowanceTotalAmount</u>
+#### AllowanceTotalAmount
 
 Het totale geldbedrag van alle kortingen en bijkomende toeslagen.
 
-<u>PrepaidAmount</u>
+#### PrepaidAmount
 
 Het totale geldbedrag dat inmiddels is voldaan of onderdeel was van een aanbetaling.
 
-<u>PayableAmount</u>
+#### PayableAmount
 
 Het totale geldbedrag dat nog dient te worden voldaan.
 
