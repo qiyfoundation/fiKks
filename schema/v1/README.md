@@ -227,54 +227,114 @@ Met de XML encryptie standaard kunnen XML documenten of delen daarvan (meervoudi
       <EncryptionProperties>?
     </EncryptedData> 
 
-De inhoud van de Payment Due List wordt versleuteld volgens AES 128-CBC, de gebruikte sleutel wordt met het publieke deel van het RSA sleutelpaar versleuteld.
+De inhoud van de Payment Due List wordt versleuteld volgens AES 128-CBC, de gebruikte sleutel wordt met het publieke deel van het RSA sleutelpaar versleuteld volgens RSAES-OAEP.
 De syntax voor een Payment Due List wordt daarmee:
 
-	<PaymentDueList>
-	    <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc"
-	        Type="http://www.w3.org/2001/04/xmlenc#Content">
-	        <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" />
-	        <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
-	            <EncryptedKey>
-					<EncryptionMethod
-						Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
-					<CipherData><CipherValue>
-	            </EncryptedKey>
-	        </ds:KeyInfo>
-	        <CipherData>
-	            <CipherValue>
-	        </CipherData>
-	    </EncryptedData>
-	</PaymentDueList>
+    <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc"
+        Type="http://www.w3.org/2001/04/xmlenc#Content">
+        <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" />
+        <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <EncryptedKey>
+				<EncryptionMethod
+					Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+				<CipherData><CipherValue>
+            </EncryptedKey>
+        </ds:KeyInfo>
+        <CipherData>
+            <CipherValue>
+        </CipherData>
+    </EncryptedData>
 
 
 ### Voorbeeld
 
-    <?xml version="1.0" encoding="UTF-8"?>
-	<!--Voorbeeld van een versleutelde openstaande factuur waarvan de vervaldatum nog niet is gepasseerd.-->
-	<!--Betaalwijze automatische incasso.-->
-	<PaymentDueList xmlns="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="urn:qiyfoundation.org:names:fikks:schema:xsd:PaymentDueList https://raw.githubusercontent.com/qiyfoundation/fiKks/master/schema/v1/xsd/PaymentDueList-1.0.xsd"
-		xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-		xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
-	    <EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc"
-	        Type="http://www.w3.org/2001/04/xmlenc#Content">
-	        <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" />
-	        <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
-	            <EncryptedKey>
-					<EncryptionMethod
-						Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
-					<CipherData><CipherValue>
-						uE4BeFaIaBjoRQWUPdzzlhnVdQVsijVawcIkurMykWAMbc7rDx8iLACIHTv9uEuhm8MJCfgsMy7eTynpZaLxfYIeQ8FVMUVX3Am2Y9ytEXca3tKMQpw7MPcOX14XjOgvNT5Ld/PRG9j914+/rT5Sh00sE8xogxf2OH/5Urjzf7I=
-					</CipherValue></CipherData>
-	            </EncryptedKey>
-	        </ds:KeyInfo>
-	        <CipherData>
-	            <CipherValue>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
-	            </CipherValue>
-	        </CipherData>
-	    </EncryptedData>
-	</PaymentDueList>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Voorbeeld van een versleutelde openstaande factuur waarvan de vervaldatum nog niet is gepasseerd.-->
+<!--Betaalwijze automatische incasso.-->
+<xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" Type="http://www.w3.org/2001/04/xmlenc#Element">
+  <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+  <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+    <xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+      <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+      <xenc:CipherData>
+        <xenc:CipherValue>ANlVWhxP62DScbyueRjY4LzHwL2xlL44hFfhbT0/qRtKCiSUgFwWigsewos7qHj6APsBjHv+AA8j&#13;
+OP5cA8BO3w0oBquAqGxjFAfqKoAGWCWEZ29xKH6zIy7wRsyC8yO46Clljvgp27q9a9AhLEs5XfeF&#13;
+g0eDb/73AWV/z+okzGQ=</xenc:CipherValue>
+      </xenc:CipherData>
+    </xenc:EncryptedKey>
+  </ds:KeyInfo>
+  <xenc:CipherData>
+    <xenc:CipherValue>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</xenc:CipherValue>
+  </xenc:CipherData>
+</xenc:EncryptedData>
 
+### Opvragen van een versleutelde Payment Due List met Qiy
+
+Een versleutelde Payment Due List kan ook met Qiy worden opgevraagd. De beschrijving hiervan is opgenomen in de Qiy Node API, zie:
+https://qiy.api.digital-me.nl/?version=latest#3811d8af-3dce-421e-8d3e-cf38963ad1c6.
 
