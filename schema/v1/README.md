@@ -248,91 +248,91 @@ De syntax voor een Payment Due List wordt daarmee:
 
 ### Voorbeeld
 
-<?xml version="1.0" encoding="UTF-8"?>
-<!--Voorbeeld van een versleutelde openstaande factuur waarvan de vervaldatum nog niet is gepasseerd.-->
-<!--Betaalwijze automatische incasso.-->
-<xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" Type="http://www.w3.org/2001/04/xmlenc#Element">
-  <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
-  <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
-    <xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
-      <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
-      <xenc:CipherData>
-        <xenc:CipherValue>ANlVWhxP62DScbyueRjY4LzHwL2xlL44hFfhbT0/qRtKCiSUgFwWigsewos7qHj6APsBjHv+AA8j&#13;
-OP5cA8BO3w0oBquAqGxjFAfqKoAGWCWEZ29xKH6zIy7wRsyC8yO46Clljvgp27q9a9AhLEs5XfeF&#13;
-g0eDb/73AWV/z+okzGQ=</xenc:CipherValue>
-      </xenc:CipherData>
-    </xenc:EncryptedKey>
-  </ds:KeyInfo>
-  <xenc:CipherData>
-    <xenc:CipherValue>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</xenc:CipherValue>
-  </xenc:CipherData>
-</xenc:EncryptedData>
-
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!--Voorbeeld van een versleutelde openstaande factuur waarvan de vervaldatum nog niet is gepasseerd.-->
+	<!--Betaalwijze automatische incasso.-->
+	<xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" Type="http://www.w3.org/2001/04/xmlenc#Element">
+	  <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+	  <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+	    <xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+	      <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	      <xenc:CipherData>
+	        <xenc:CipherValue>ANlVWhxP62DScbyueRjY4LzHwL2xlL44hFfhbT0/qRtKCiSUgFwWigsewos7qHj6APsBjHv+AA8j&#13;
+	OP5cA8BO3w0oBquAqGxjFAfqKoAGWCWEZ29xKH6zIy7wRsyC8yO46Clljvgp27q9a9AhLEs5XfeF&#13;
+	g0eDb/73AWV/z+okzGQ=</xenc:CipherValue>
+	      </xenc:CipherData>
+	    </xenc:EncryptedKey>
+	  </ds:KeyInfo>
+	  <xenc:CipherData>
+	    <xenc:CipherValue>T7knFWXnOT9I8Tfvi3C+eyAmYgN6x/CuGpl4Rc5Zw+jmuUk8XSWMoPYY8BmjvQwESW9mGbPwosDI&#13;
+	Ep72yzW1jwt9H1SLWUUd244WpO9A28uS6NQf0n2fPruWFm4++6cr+s3p3/G11fgMiMK20UzwqwSJ&#13;
+	7pLcZuoLXggK2SotBn/B9ieMpUyRxawpz9L+dRLVbcpNLaXj3MK+dEEa+v/cAcme+s9LabgovKgs&#13;
+	IrrN+tF/ZY5riCuxzU/+eFbknz20agxU9Q+3CUnZJnE3QAa1RfpKwVYFLTOt1AAQg58Ht9KHZvyI&#13;
+	S1xzDT+s5Ex1BQn2vUu5Kco+4522sYB4RdILC0H0xsjtqWmXPgvV9e0NzSNGEFzXGchDsGRZRPI/&#13;
+	GqkYNKYzEhSkFckPfm6mk/jOCFmzd2ztzZ2pzqKyNUET2/gR6wPch/jwtgxeHApngEBQy0Xvao5q&#13;
+	tbh5C3RkfXsFzlV6MqGNZh5ANo4FQo4oDxmSFdYQEnganasKdlRjsc741YWjM+iSI6CxX3KUtHyX&#13;
+	uHkHKWFugz9UtWhXA4l22TaB++e5oAffFqyc/r0tHF+kwsmlzcFev6IYLm1jVzrgajjG4nlqBZO8&#13;
+	m21dcOlRGs6PSsQ4ZkcG2kyXLOPIDvN/TmowVCv7B2WuT65ac5USzmLNSpi902MeUx2q2+GNKuZH&#13;
+	CihxXu5m5NOUSvOkI2tHvkF6s5XTmkOEHZRb4EDQsZAv3aGi6XBssGaLpwK55qvuKylNc3yPZdGQ&#13;
+	0rueNwhHNO7183G0qGrbTtN/MU+eY/D4odREeim6+KJEX68du5/GKFs34utAHxncA1ffuOeohiFX&#13;
+	u0ohxcCCDo59aJB/HfGZPrr5VuNx5MvMwV0HiCHP9puIaRLX7yty1Ijftljkkgt2Ssik0PLwwJK9&#13;
+	MAUUPa/FHc9WqfsHYMnKtxstxXy1TH34kf4nasIqA7L3mW5Gr3N3plQlzxjFo/pKaCt3lfJZoIvw&#13;
+	jHK6oMdW0bCSIKKMvxEFo76jfxkPE9MscZhbhGhcU/j9bC9WH2+gkUBy89u/8Fyv1NKsoXAmSgvk&#13;
+	vbSN+sxoD7GBm5IZCTDyhw7at12xmn6lrPtT42v27vuH+/+pOADBV+EGiHqloldnT9ShENvwhaQc&#13;
+	0mHTxCVMKOWUTOdE1GiqxcMBs9iWZmniFmFkonK9tfg2baZJOqZ5YAetGeInAHgd/lihCoD5fqxY&#13;
+	/uuy8DHvzG4A/RHimgCX9SagantHxZT98ZA5vL2G1aIseZKceSdgXzkxbb/SO7pTr9qHzfenRsEh&#13;
+	QRodUOmA+zDg85GdEkRuquSOy19iKCeqINrlUIB+yluiv7vZyQmNvnloee1+mIvWoZ2hIBMhlErR&#13;
+	wZS4cQ6LLDyJwPyO6RuzE3BUK7NAxoiupJ1pkqNcHGhFpRM3Hgbgh0a6xQr/VYWm5PWodaFpFKKZ&#13;
+	eOm8P5+JtK0RUn8ZD2BRkPB0H4E42forn1psCkpi4UF/2nTUD7KAB07BT3QEg3CRXedSYbYsSvh6&#13;
+	8hSDgcT11z0IHiS7tuBIVXV7zMIlEb/rg+iw0RQ4uGsJXj9LCJluRIOMk+RFeToLkNlK6vqKZsXJ&#13;
+	EZ3kciZdrXpvxmOKSoFwUXozJr+sAgpvyAjp9H16i3NWP7vWNkkPLH54zAlvk/ISLqqPSeHzt8VK&#13;
+	96J6aO6iVBF/u5bYW2lTrQ3O1YAyM3wXuC2snrsz+mQtH2TVaiHHAKEIZaQwJdF/fNzuLuumFPJ+&#13;
+	RQJfyozrk22O9zR4kxiZ4z+iGX5CU843vSiRMm78Sga/GdEvz1vwxcQ4/7iJJ1gSwBQva3yJtnQF&#13;
+	3mNPEcgVfjAUdEuIxAISBCZ2XrlN0RbGsgwRUKLfUKlRe19AO1e4cEue+FLDPO4XqtSKWU0/oV3l&#13;
+	TI0OTgjNH42Rg6unTaMTihTYLkindXkTw8/czk4sB15DpBiQBAIbndiDAgqKqCzDFuhRhrO0M9cK&#13;
+	RobrSoewexlAs1juNDV8pKaWsadbWqbWAolthGFVf5dD358tfzE99QTrEnjx1Ivz9P5ruL+n/D4P&#13;
+	PX9i0xbP1FzNkA0vbSGT87PFifO7yR8Wct8BoSm2vbEg35Yzvj+/8ePmCo2CAOps3cS9m3NVixpM&#13;
+	0moQwmnJ6rmj9MB1oaHGhHue+kBROtArP53aAjcrOS+LrzXwDbSET1BWC72PJ507ovjCcsmq4cPy&#13;
+	nJmv5EOGvePpm+vJ5e91HPUs0WH9vxLFAt8/+Xa4Zdhy0SXzVXKv7oeD0EaOgV4zLHJqcpO7/Fvu&#13;
+	9oxhyQ/JX6colo4yyyCe0U5hv87qRZlkAMSMIiEPbpS4QlnGs2CqP0U6LKh6PGjZGdU71VNlAYws&#13;
+	1oASHy9XfXTqvpUndRaU0xZ+e53PJD17DtyZ3AiNxjpZUaB1Y1OraOf7agi4FmM4qehphvPmQNVg&#13;
+	H+aFRYyEh1hbX0i+PWx4yWcMvOu2RPRJh2BOFqjMKI3GVmg8KPsuyM/sqG18yVVE5irpWY8PiC18&#13;
+	1+4JGY35ZYnLlKs0/U8ycf4+JhYqUgQVs/CtKx8SjE3lxGTXh2MiL+gt2kwp+s7cm9taxEXo2ISe&#13;
+	xo0dC2tWrYtp20BWHInsRL9u/vzmaIl8xiLUoX7ZsikTlClJBdWuJmjG/L1cZzo+8p2bHXj3myOj&#13;
+	APtGqMnetyeKb1QINfbKgqqnjZ9XxzHdis71/LQx9dVVmL1fDDzL7JgUmUdC2jNiXb6gvIBzOxVa&#13;
+	HIu5d7tWYmMFLdj8WkZxp/W2cMdjESGABt0cz2dklg7MsI16TdnCKOg/g4QAaVdvxdlCa4h2BEJS&#13;
+	1aedRRcoQ5Kb7MoCSa7rmoFfXnwK4kK/rqGixNsjeIdNkfVJwQd2FocfPqDTsAt+Yj/fTweEnvvk&#13;
+	wV97q2Ish9torpzPtA3KNHYXqNIvbaqKs7bXQiGnvfduK+S0Ug5h6zutZfqA/JZT4FzMhZX703ZC&#13;
+	1f92DuUTdKGwde/VXY3SKZWkujF6R7Pel35lztx6ENcdpQ83uvoT4ivE7k+tUhPynkhmNhknPPTF&#13;
+	wClNO+6Zt+UORZplS9uqlht5Pc397VHqig1RfXyLhxCe/JcsUp0WnsZEp31yzj075Ec7qh6UbmPN&#13;
+	ppKXQnnzehvIa4/+ze8/YGm4VaQqBOkYcFCCSsbL+2mtGGyU6b0cUuQ06RNYBfFK5YBFqH3Cy+84&#13;
+	b4fiJC9hLVPvLdCdA9r2U3wPxUnYl1TduMKSsdaxRMB2DgHslNcGLQUE4R1BGArs1I+w51WFeBC5&#13;
+	efNLaclxpnip/3FBDBUDhSObkk97yAVj8cnwMzr0uvcIxUTBQevoX5eEQ3y/LUbqr1VOO6yfceZW&#13;
+	XIOgc7CfW6HJ62JfuSBWLvB4ufLlWaEjLXglRoDJcxnROl19gGOVV4B8EhhC+/EBT6PHIuAQoBqA&#13;
+	lI7Wx1pUe+vfsv31gXLzxX4HURHcajKbl2veCta9F9PlE+P8gr0uUvCOirx4gMjSs1w58ZSycLK/&#13;
+	fU84KJTdr8jGxLu2yBoSrEWM0rLJX3Uy42sgyhnJPrjw+HAbbQ34NWtGdIP04LS/1+aDVl5WWuvh&#13;
+	WWT29/JeNBSsw3JxDIkFwTKlrkzLfGlEcf7OnwKLZMCQKzcVXwFLMSEzC8LALtU3EvtW5ETlK0Ic&#13;
+	62DPEoGjCfj1v6kteNVxNlq6h6FvU0+GLtxQBMXCdEYOoIS8jBq76swPEKwh9z0exJmO/aW5fm55&#13;
+	iJQHpE4dK26JW9Yfvw3NalB6YN4i5suY2cdDGG1yMpToAYXesMVwf/Mts8TQQkNjYZTf+giURQWp&#13;
+	mzi0j1l3XIa1far9OTNzQUB1+9dwOnV/S/j6IQstGOFaBQk+Bz4mlk4zlpdaAxFlGZEyKQQwmsYn&#13;
+	X+aER6PSKNc57qym5NdQYwZZhqt4ZTlxtanE7aqXrmaoBJeOPqNdybSzPENsQGCjrTIuXuyiTkSR&#13;
+	jAXSAXqbmEkR3b8jLc23yY2A1opZxE2855KKRDWk9rKYipPhQRYc4bldUQcVZLP82jvE29TVR9C0&#13;
+	O2XZGhu47lTP+hOIyNX/8fcvQM762V1ZB10TmrnfTyk7GMsnvDWqaD1enGFGYBOLhgMMtP1Hpgqj&#13;
+	llyU8KZDPGFMcriuNWHi9dQl9Is/XRYHFI+ugdkTDKCu7pbT7Imqysz+MgENFIT08gntZrIV/MK0&#13;
+	SG9SD+nIzJxs4Sc3FRPY10KiVpsFmQNxlpdHru8h1E81RVsvdJe3m/tdn1Ix+X+04TQeQFE7sgmb&#13;
+	b3/ZrMMQZ86rKLaJcGy5rs5JBnhJe/Kajn3+79jZqUxESv0yZ4iS4MITLSKXdAwmGJ9kraBv+SZo&#13;
+	DCZXenfFe0Zk1GCKYy2C60DfwbJECB1Lf5sCB5BLPqS/GgAJqSqla6cL81gRAeg/a3MXC9zVGJ6X&#13;
+	1TROBNASDRY5+cfMtk1477/LujJCRW1dswqeu8np+siffRJt0FVHc6i+ygljSRmeACUljUOHC277&#13;
+	p9hDYL+mLt7BDmQhc3nJelWIMSqSsgE5Bigq0uQwUiUsnkTFWusV82VT2PF9+5SEifoUfhEQlBoU&#13;
+	TFvRQ7j9ZwJjlFsFf4WEWEeK6T3F5nlzk8iinxKkBxs5fok3lE5b3Ex7cyywJnBRltESJFl3MF+U&#13;
+	yWPcTeF0Sfz45mAH3gh2r14MP9IMhqt7q67uCAhSLz6+T6h3YpWnmgKnjpXzyvHj0MlexXa/mywa&#13;
+	va1pAyhO5XddaDvmOvr36ydI24KBrHLqOLinMe1DKBtYpx37GAOBYaiVjxBpFSmYToFUnwzLhbFU&#13;
+	6AgLJAnz/Wbdztb8BNXXUMik/u0eEL26ZMsPE9UospIgVnqSmh+N70H45KHmnxaEXmRz2LmTBy2/&#13;
+	atjLgllhb0Rno0/lOLRweJofn/dwjhcAC1HA/3018ym0NjCdMOckxlOVCcuOdcANn0MBPy5AnTzI&#13;
+	pwkxkoVFFx3tWRSyGEWXULKZ+ckE0W8b/EpSSgQkhjMsnXMmqn9ruq/lqTkflfT9QXwmxNBTFw==</xenc:CipherValue>
+	  </xenc:CipherData>
+	</xenc:EncryptedData>
+	
 ### Opvragen van een versleutelde Payment Due List met Qiy
 
 Een versleutelde Payment Due List kan ook met Qiy worden opgevraagd. De beschrijving hiervan is opgenomen in de Qiy Node API, zie:
